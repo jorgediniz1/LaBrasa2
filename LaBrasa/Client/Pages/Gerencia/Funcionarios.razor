@@ -1,0 +1,147 @@
+﻿@page "/funcionarios"
+
+<h3>Funcionarios</h3>
+
+<style>
+    .btn {
+        border-radius: 0;
+    }
+
+    .btn-danger {
+    }
+
+    .btn-primary, .btn-success {
+    }
+
+    .float {
+        position: absolute;
+        right: 0;
+        margin-right: 10px;
+        top: 0;
+        margin-top: 5px;
+    }
+</style>
+
+@if (visibilidadePainel)
+{
+    <div class="input-group">
+        <input class="form-control" placeholder="Pesquisar..." />
+        <button class="btn btn-danger" style="border-radius: 0!important"><i class="oi oi-magnifying-glass"></i></button>
+        <button class="btn btn-success" style="margin-left: 25px;" @onclick="alterarVisibilidade"><i class="oi oi-plus"></i></button>
+    </div>
+
+
+    <ul class="list-group mt-3">
+        <li class="list-group-item">
+            Gabriel Fernando Aguinel
+            <div class="float">
+                <button class="btn btn-primary"><i class="oi oi-pencil" @onclick="EditarFuncionario"></i></button>
+            </div>
+        </li>
+        <li class="list-group-item">
+            Juliano Marques Figueiredo
+            <div class="float">
+                <button class="btn btn-primary"><i class="oi oi-pencil"@onclick="EditarFuncionario"></i></button>
+            </div>
+        </li>
+        <li class="list-group-item">
+            Morbi leo risus
+            <div class="float">
+                <button class="btn btn-primary"><i class="oi oi-pencil"@onclick="EditarFuncionario"></i></button>
+            </div>
+        </li>
+        <li class="list-group-item">
+            Porta ac consectetur ac
+            <div class="float">
+                <button class="btn btn-primary"><i class="oi oi-pencil"@onclick="EditarFuncionario"></i></button>
+            </div>
+        </li>
+    </ul>
+}
+
+@if (visibilidadeForm)
+{
+
+    <div>
+        @tituloForm
+    </div>
+    <form>
+        <div class="row">
+            <div class="form-group col-8">
+                <label for="exampleInputEmail1">Nome</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nome">
+            </div>
+            <div class="form-group col-4">
+                <label for="exampleInputEmail1">Id</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Id">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-12">
+                <label for="exampleFormControlSelect1">Departamento</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Gerencia</option>
+                    <option>Atendimento</option>
+                    <option>Produção</option>                 
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-4">
+                <label for="exampleInputEmail1">CPF</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="cpf">
+            </div>
+
+            <div class="form-group col-4">
+                <label for="exampleFormControlSelect1">Sexo</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Masculino</option>
+                    <option>Feminino</option>
+                    <option>Outro</option>
+                </select>
+            </div>
+
+            <div class="form-group col-4">
+                <label for="exampleInputEmail1">Telefone</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="() XXXXX-XXXX">
+            </div>
+        </div>
+
+        <div class="row">       
+            <div class="form-group col-12">
+                <label for="exampleInputEmail1">Endereço</label>
+                <input type="text" class="form-control" id="exampleInputEmail1">
+            </div>
+        </div>
+
+        <div class="row">
+            <button type="submit" class="btn btn-danger col-6">Incluir</button>
+            <button class="btn btn-light col-6" @onclick="alterarVisibilidade">Voltar</button>
+        </div>
+    </form>
+
+}
+
+
+
+@code {
+    string tituloForm;
+    bool visibilidadePainel = true;
+    bool visibilidadeForm = false;
+
+    private void alterarVisibilidade()
+    {
+        visibilidadePainel = !visibilidadePainel;
+        visibilidadeForm = !visibilidadeForm;
+        tituloForm = "Novo Funcionario";
+    }
+
+    private void EditarFuncionario()
+    {
+        visibilidadePainel = !visibilidadePainel;
+        visibilidadeForm = !visibilidadeForm;
+        tituloForm = "Editar Funcionario";
+    }
+}

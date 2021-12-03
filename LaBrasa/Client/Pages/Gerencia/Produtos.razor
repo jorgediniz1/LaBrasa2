@@ -1,0 +1,149 @@
+﻿@page "/produtos"
+@using LaBrasa.Shared
+@inject HttpClient Http
+
+<h3>Produtos</h3>
+<style>
+    .btn {
+        border-radius: 0;
+    }
+
+    .btn-danger {
+
+    }
+
+    .btn-primary, .btn-success {
+       
+    }
+
+    .float {
+        position: absolute;
+        right: 0;
+        margin-right: 10px;
+        top: 0;
+        margin-top: 5px;
+    }
+</style>
+
+<div>
+    @if (visibilidadePainel)
+    {
+
+        <div class="input-group">
+            <input class="form-control" placeholder="Pesquisar..." />
+            <button class="btn btn-danger" style="border-radius: 0!important"><i class="oi oi-magnifying-glass"></i></button>
+            <button class="btn btn-success" style="margin-left: 25px;" @onclick="alterarVisibilidade"><i class="oi oi-plus"></i></button>
+        </div>
+
+
+        <ul class="list-group mt-3">
+            <li class="list-group-item">
+                Espeto de jacaré <b>R$50,00</b>
+                <div class="float">
+                    <button class="btn btn-danger">X</button> <button class="btn btn-primary" @onclick="EditarProduto"><i class="oi oi-pencil"></i></button>
+                </div>
+            </li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+
+    }
+    @if (visibilidadeForm)
+    {
+        <div>
+            @tituloForm
+        </div>
+        <form>
+            <div class="row">
+                <div class="form-group col-8">
+                    <label for="exampleInputEmail1">Nome</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nome">
+                </div>
+                <div class="form-group col-4">
+                    <label for="exampleInputEmail1">Id</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Id">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-12">
+                    <label for="exampleFormControlSelect1">Categoria</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-6">
+                    <label for="exampleInputEmail1">Preço Custo</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nome">
+                </div>
+                <div class="form-group col-6">
+                    <label for="exampleInputEmail1">Preço Venda</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Id">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-4">
+                    <label for="exampleInputEmail1">Qtd Minima</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1">
+                </div>
+                <div class="form-group col-4">
+                    <label for="exampleInputEmail1">Estoque</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1">
+                </div>
+                <div class="form-group col-4">
+                    <label for="exampleInputEmail1">A adicionar</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1">
+                </div>
+            </div>
+
+            <div class="row">
+                <button type="submit" class="btn btn-danger col-6">Submit</button>
+                <button class="btn btn-light col-6" @onclick="alterarVisibilidade">Voltar</button>
+            </div>
+        </form>
+    }
+
+
+</div>
+
+@code {
+    //private WeatherForecast[] forecasts;
+
+    //protected override async Task OnInitializedAsync()
+    //{
+    //    forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("WeatherForecast");
+    //}
+    string tituloForm;
+    bool visibilidadePainel = true;
+    bool visibilidadeForm = false;
+
+    private void alterarVisibilidade()
+    {
+        visibilidadePainel = !visibilidadePainel;
+        visibilidadeForm = !visibilidadeForm;
+        tituloForm = "Novo Produto";
+    }
+
+    private void EditarProduto()
+    {
+        visibilidadePainel = !visibilidadePainel;
+        visibilidadeForm = !visibilidadeForm;
+        tituloForm = "Editar Produto";
+    }
+
+    public void deletarPessoa()
+        {
+          
+        }
+
+}
