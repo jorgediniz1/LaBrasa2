@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace LaBrasa.Client.Pages.Gerencia
+namespace LaBrasa.Client.Pages.Atendimento
 {
     #line hidden
     using System;
@@ -89,38 +89,14 @@ using MudBlazor;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/funcionarios")]
-    public partial class Funcionarios : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("//pedidos")]
+    public partial class Pedidos : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 136 "C:\Treinee\LaBrasa\Labrasa\Client\Pages\Gerencia\Funcionarios.razor"
-       
-    string tituloForm;
-    bool visibilidadePainel = true;
-    bool visibilidadeForm = false;
-
-    private void alterarVisibilidade()
-    {
-        visibilidadePainel = !visibilidadePainel;
-        visibilidadeForm = !visibilidadeForm;
-        tituloForm = "Novo Funcionario";
-    }
-
-    private void EditarFuncionario()
-    {
-        visibilidadePainel = !visibilidadePainel;
-        visibilidadeForm = !visibilidadeForm;
-        tituloForm = "Editar Funcionario";
-    }
-
-#line default
-#line hidden
-#nullable disable
     }
 }
 #pragma warning restore 1591

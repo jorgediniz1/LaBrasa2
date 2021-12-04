@@ -14,8 +14,6 @@ C:\pidiProjeto\LaBrasa\LaBrasa\Shared\obj\Debug\net5.0\ref\LaBrasa.Shared.dll
 C:\pidiProjeto\LaBrasa\LaBrasa\Shared\obj\Debug\net5.0\LaBrasa.Shared.pdb
 C:\pidiProjeto\LaBrasa\LaBrasa\Shared\obj\Debug\net5.0\LaBrasa.Shared.genruntimeconfig.cache
 C:\Treinee\LaBrasa\Labrasa\Shared\bin\Debug\net5.0\LaBrasa.Shared.deps.json
-C:\Treinee\LaBrasa\Labrasa\Shared\bin\Debug\net5.0\LaBrasa.Shared.runtimeconfig.json
-C:\Treinee\LaBrasa\Labrasa\Shared\bin\Debug\net5.0\LaBrasa.Shared.runtimeconfig.dev.json
 C:\Treinee\LaBrasa\Labrasa\Shared\bin\Debug\net5.0\LaBrasa.Shared.dll
 C:\Treinee\LaBrasa\Labrasa\Shared\bin\Debug\net5.0\ref\LaBrasa.Shared.dll
 C:\Treinee\LaBrasa\Labrasa\Shared\bin\Debug\net5.0\LaBrasa.Shared.pdb
@@ -27,4 +25,3 @@ C:\Treinee\LaBrasa\Labrasa\Shared\obj\Debug\net5.0\LaBrasa.Shared.csproj.CoreCom
 C:\Treinee\LaBrasa\Labrasa\Shared\obj\Debug\net5.0\LaBrasa.Shared.dll
 C:\Treinee\LaBrasa\Labrasa\Shared\obj\Debug\net5.0\ref\LaBrasa.Shared.dll
 C:\Treinee\LaBrasa\Labrasa\Shared\obj\Debug\net5.0\LaBrasa.Shared.pdb
-C:\Treinee\LaBrasa\Labrasa\Shared\obj\Debug\net5.0\LaBrasa.Shared.genruntimeconfig.cache

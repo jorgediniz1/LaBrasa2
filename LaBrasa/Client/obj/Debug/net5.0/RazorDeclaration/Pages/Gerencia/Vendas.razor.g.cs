@@ -98,7 +98,7 @@ using System.Net.Http.Json;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 47 "C:\Treinee\LaBrasa\Labrasa\Client\Pages\Gerencia\Vendas.razor"
+#line 49 "C:\Treinee\LaBrasa\Labrasa\Client\Pages\Gerencia\Vendas.razor"
        
     MudDatePicker _picker;
     DateTime? date = DateTime.Today;

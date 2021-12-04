@@ -105,7 +105,7 @@ using LaBrasa.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 119 "C:\Treinee\LaBrasa\Labrasa\Client\Pages\Gerencia\Produtos.razor"
+#line 117 "C:\Treinee\LaBrasa\Labrasa\Client\Pages\Gerencia\Produtos.razor"
        
     //private WeatherForecast[] forecasts;
 

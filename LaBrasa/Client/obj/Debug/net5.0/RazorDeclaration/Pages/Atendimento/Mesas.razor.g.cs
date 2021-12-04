@@ -97,6 +97,31 @@ using MudBlazor;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 106 "C:\Treinee\LaBrasa\Labrasa\Client\Pages\Atendimento\Mesas.razor"
+       
+
+    bool visibilidadePainel = true;
+    bool visibilidadeDetalheMesa = false;
+
+    private void alterarVisibilidade()
+    {
+        visibilidadePainel = !visibilidadePainel;
+        visibilidadeDetalheMesa = !visibilidadeDetalheMesa;
+
+    }
+
+    private void AbrirMesa()
+    {
+        visibilidadePainel = !visibilidadePainel;
+        visibilidadeDetalheMesa = !visibilidadeDetalheMesa;
+
+    }
+
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

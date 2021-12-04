@@ -1,39 +1,34 @@
-﻿using LaBrasa.Shared.Contracts;
-using LaBrasa.Shared.Entities;
+﻿using LaBrasa.Shared.Entities;
+using LaBrasa.Shared.Interfaces;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using con = LaBrasa.Shared.Context;
 
 namespace LaBrasa.Shared.Repository
 {
-    public class ProdutosRepository : IProdutoRepository
+    public class ProdutosRepository : IProdutoRepo
     {
-        private readonly con.Context _context;
-        public ProdutosRepository(con.Context context)
-        {
-            _context = context;
-        }
-        public Task<Produto> AddAsync(Produto produto)
+      
+        public Task<Produto> ApagarProduto(int id)
         {
             throw new System.NotImplementedException();
         }
 
-        public Task Delete(int id)
+        public Task<Produto> AtualizarProduto(Produto produto)
         {
             throw new System.NotImplementedException();
         }
 
-        public Task<List<Produto>> GetAllAsync()
+        public Task<Produto> IncluirProduto(Produto produto)
         {
             throw new System.NotImplementedException();
         }
 
-        public Task<Produto> GetById(int id)
+        public Task<Produto> PegarPeloId(int id)
         {
             throw new System.NotImplementedException();
         }
 
-        public Task<Produto> UpdateAsync(Produto produto)
+        public Task<Produto> PegarTodos(Produto produto)
         {
             throw new System.NotImplementedException();
         }
